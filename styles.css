@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ddddde;
+    background-color: #535353;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    border: 1px solid #494949;
+    padding: 5px 10px;
+}
+
+.menu {
+    border: 1px solid #494949;
+    padding: 5px 10px;
+}
+
+.button{
+    padding: 5px 10px;
+    color: #ddddde;
+    background-color: #535353;
+    border: 1px solid #494949;
+    cursor: pointer;
+}
+
+.main {
+    border: 1px solid #494949;
+    padding: 5px 10px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.image-container {
+    background-color:  #282828; 
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 300px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+label, input {
+    margin-top: 40px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #282828, #282828 50%, #494949 50%, #494949);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    margin-top: 8px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #282828;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Stilizzazione per input range in Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #282828;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Editor Immagine</title>
+</head>
+<body>
+    <div class="header"><p>Fakeshop</p></div>
+    <div class="menu"><button class="button" id="changeImageButton">Cambia Immagine</button></div>
+    <div class="main">
+        <div class="image-container">
+            <img id="image" src="https://picsum.photos/id/100/640/480" alt="Uploaded Image">
+        </div>
+        
+        <div class="filters-container">
+            <label for="sepiaRange">Sepia:</label>
+            <input type="range" id="sepiaRange" min="0" max="100" value="0">
+        
+            <label for="grayScaleRange">Grayscale:</label>
+            <input type="range" id="grayScaleRange" min="0" max="100" value="0">
+        
+            <label for="blurRange">Blur:</label>
+            <input type="range" id="blurRange" min="0" max="10" value="0">
+        
+            <label for="brightnessRange">Brightness:</label>
+            <input type="range" id="brightnessRange" min="0" max="200" value="100">
+        
+            <label for="contrastRange">Contrast:</label>
+            <input type="range" id="contrastRange" min="0" max="200" value="100">
+        
+            <label for="saturateRange">Saturate:</label>
+            <input type="range" id="saturateRange" min="0" max="200" value="100">
+        </div>
+
+    </div>
+    
+    
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
