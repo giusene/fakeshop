@@ -9,6 +9,9 @@ const blurRange = document.getElementById('blurRange');
 const brightnessRange = document.getElementById('brightnessRange');
 const contrastRange = document.getElementById('contrastRange');
 const saturateRange = document.getElementById('saturateRange');
+const toggleButton = document.getElementById('toggleFilter')
+
+let isActive = true;
 
 changeImageButton.addEventListener('click', changeImage);
 sepiaRange.addEventListener('input', updateFilters);
@@ -17,6 +20,7 @@ blurRange.addEventListener('input', updateFilters);
 brightnessRange.addEventListener('input', updateFilters);
 contrastRange.addEventListener('input', updateFilters);
 saturateRange.addEventListener('input', updateFilters);
+toggleButton.addEventListener('click', switchFilters);
 
 function changeImage() {
     const randomImageId = Math.floor(Math.random() * 1000) + 1;
@@ -43,7 +47,15 @@ function updateFilters() {
     const contrastValue = contrastRange.value;
     const saturateValue = saturateRange.value;
 
-    imageElement.style.filter = `sepia(${sepiaValue}%) grayscale(${grayScaleValue}%) blur(${blurValue}px) brightness(${brightnessValue}%) contrast(${contrastValue}%) saturate(${saturateValue}%)`;
+    const filters = `sepia(${sepiaValue}%) grayscale(${grayScaleValue}%) blur(${blurValue}px) brightness(${brightnessValue}%) contrast(${contrastValue}%) saturate(${saturateValue}%)`
+
+    imageElement.style.filter = isActive ? filters : '';
+}
+
+function switchFilters() {
+    isActive = !isActive;
+
+    updateFilters();
 }
 
 changeImage()
