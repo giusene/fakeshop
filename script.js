@@ -9,7 +9,7 @@ const blurRange = document.getElementById('blurRange');
 const brightnessRange = document.getElementById('brightnessRange');
 const contrastRange = document.getElementById('contrastRange');
 const saturateRange = document.getElementById('saturateRange');
-const toggleButton = document.getElementById('toggleFilter')
+const toggleFilter = document.getElementById('toggleFilter')
 
 let isActive = true;
 
@@ -20,12 +20,14 @@ blurRange.addEventListener('input', updateFilters);
 brightnessRange.addEventListener('input', updateFilters);
 contrastRange.addEventListener('input', updateFilters);
 saturateRange.addEventListener('input', updateFilters);
-toggleButton.addEventListener('click', switchFilters);
+toggleFilter.addEventListener('change', switchFilters);
 
 function changeImage() {
     const randomImageId = Math.floor(Math.random() * 1000) + 1;
     const imageUrl = `https://picsum.photos/id/${randomImageId}/640/480`;
     imageElement.src = imageUrl;
+    isActive = true;
+    toggleFilter.checked = false
     resetFilters();
 }
 
